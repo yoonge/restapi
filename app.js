@@ -11,6 +11,7 @@ var taskList = require('./routes/taskList');
 var taskListAll = require('./routes/taskListAll');
 var taskBasicInfo = require('./routes/taskBasicInfo');
 var riskRetrieval = require('./routes/riskRetrieval');
+var userList = require('./routes/userList');
 
 var app = express();
 
@@ -42,6 +43,7 @@ app.use('/taskList', taskList);
 app.use('/taskListAll', taskListAll);
 app.use('/taskBasicInfo', taskBasicInfo);
 app.use('/riskRetrieval', riskRetrieval);
+app.use('/userList', userList);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
