@@ -13,6 +13,7 @@ var taskBasicInfo = require('./routes/taskBasicInfo');
 var riskRetrieval = require('./routes/riskRetrieval');
 var userList = require('./routes/userList');
 var wifiList = require('./routes/wifiList');
+var logList = require('./routes/logList');
 
 var app = express();
 
@@ -46,6 +47,7 @@ app.use('/taskBasicInfo', taskBasicInfo);
 app.use('/riskRetrieval', riskRetrieval);
 app.use('/userList', userList);
 app.use('/wifiList', wifiList);
+app.use('/logList', logList);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
