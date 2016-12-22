@@ -7,15 +7,17 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var taskList = require('./routes/taskList');
-var taskListAll = require('./routes/taskListAll');
-var taskBasicInfo = require('./routes/taskBasicInfo');
-var riskRetrieval = require('./routes/riskRetrieval');
-var userList = require('./routes/userList');
-var wifiList = require('./routes/wifiList');
-var logList = require('./routes/logList');
-var onlineUserList = require('./routes/onlineUserList');
-var blockList = require('./routes/blockList');
+// var taskList = require('./routes/taskList');
+// var taskListAll = require('./routes/taskListAll');
+// var taskBasicInfo = require('./routes/taskBasicInfo');
+// var riskRetrieval = require('./routes/riskRetrieval');
+// var userList = require('./routes/userList');
+// var wifiList = require('./routes/wifiList');
+// var logList = require('./routes/logList');
+// var onlineUserList = require('./routes/onlineUserList');
+// var blockList = require('./routes/blockList');
+var getUrl = require('./routes/getUrl');
+var getUserInfo = require('./routes/getUserInfo');
 
 var app = express();
 
@@ -43,15 +45,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
-app.use('/taskList', taskList);
-app.use('/taskListAll', taskListAll);
-app.use('/taskBasicInfo', taskBasicInfo);
-app.use('/riskRetrieval', riskRetrieval);
-app.use('/userList', userList);
-app.use('/wifiList', wifiList);
-app.use('/logList', logList);
-app.use('/onlineUserList', onlineUserList);
-app.use('/blockList', blockList);
+// app.use('/taskList', taskList);
+// app.use('/taskListAll', taskListAll);
+// app.use('/taskBasicInfo', taskBasicInfo);
+// app.use('/riskRetrieval', riskRetrieval);
+// app.use('/userList', userList);
+// app.use('/wifiList', wifiList);
+// app.use('/logList', logList);
+// app.use('/onlineUserList', onlineUserList);
+// app.use('/blockList', blockList);
+app.use('/getUrl', getUrl);
+app.use('/getUserInfo', getUserInfo);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
